@@ -10,7 +10,7 @@ var App = {
     components:{ HelloWorld },
     template:`
         <div>
-            {{ this.msg }}
+            {{ msg }}
             <hello-world></hello-world>
         </div>
     `,
