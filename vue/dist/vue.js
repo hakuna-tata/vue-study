@@ -1018,7 +1018,6 @@
     shallow
   ) {
     var dep = new Dep();
-    debugger
     var property = Object.getOwnPropertyDescriptor(obj, key);
     if (property && property.configurable === false) {
       return
@@ -1036,7 +1035,6 @@
       enumerable: true,
       configurable: true,
       get: function reactiveGetter () {
-        debugger
         var value = getter ? getter.call(obj) : val;
         if (Dep.target) {
           dep.depend();
@@ -1050,7 +1048,6 @@
         return value
       },
       set: function reactiveSetter (newVal) {
-        debugger
         var value = getter ? getter.call(obj) : val;
         /* eslint-disable no-self-compare */
         if (newVal === value || (newVal !== newVal && value !== value)) {
@@ -4635,6 +4632,7 @@
     } else {
       observe(vm._data = {}, true /* asRootData */);
     }
+    debugger
     if (opts.computed) { initComputed(vm, opts.computed); }
     if (opts.watch && opts.watch !== nativeWatch) {
       initWatch(vm, opts.watch);
@@ -5155,6 +5153,7 @@
         initProps$1(Sub);
       }
       if (Sub.options.computed) {
+        debugger
         initComputed$1(Sub);
       }
 
