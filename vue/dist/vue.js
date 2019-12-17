@@ -1018,7 +1018,7 @@
     shallow
   ) {
     var dep = new Dep();
-
+    debugger
     var property = Object.getOwnPropertyDescriptor(obj, key);
     if (property && property.configurable === false) {
       return
@@ -1036,6 +1036,7 @@
       enumerable: true,
       configurable: true,
       get: function reactiveGetter () {
+        debugger
         var value = getter ? getter.call(obj) : val;
         if (Dep.target) {
           dep.depend();
@@ -1049,6 +1050,7 @@
         return value
       },
       set: function reactiveSetter (newVal) {
+        debugger
         var value = getter ? getter.call(obj) : val;
         /* eslint-disable no-self-compare */
         if (newVal === value || (newVal !== newVal && value !== value)) {
@@ -1077,7 +1079,6 @@
    * already exist.
    */
   function set (target, key, val) {
-    debugger
     if (isUndef(target) || isPrimitive(target)
     ) {
       warn(("Cannot set reactive property on undefined, null, or primitive value: " + ((target))));
