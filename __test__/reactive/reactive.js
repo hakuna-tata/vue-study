@@ -24,9 +24,9 @@ var App = {
     },
     methods:{
         change(){
-            this.list[0] = 22
-            this.list.__ob__.dep.notify()
-            // this.msg = Math.random()
+            // this.list[0] = 22
+            // this.list.__ob__.dep.notify()
+            this.msg = Math.random()
         },
         toggle(){
             this.flag = !this.flag

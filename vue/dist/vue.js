@@ -4628,11 +4628,12 @@
     if (opts.props) { initProps(vm, opts.props); }
     if (opts.methods) { initMethods(vm, opts.methods); }
     if (opts.data) {
+      debugger
       initData(vm);
     } else {
+      debugger
       observe(vm._data = {}, true /* asRootData */);
     }
-    debugger
     if (opts.computed) { initComputed(vm, opts.computed); }
     if (opts.watch && opts.watch !== nativeWatch) {
       initWatch(vm, opts.watch);
@@ -5153,7 +5154,6 @@
         initProps$1(Sub);
       }
       if (Sub.options.computed) {
-        debugger
         initComputed$1(Sub);
       }
 
