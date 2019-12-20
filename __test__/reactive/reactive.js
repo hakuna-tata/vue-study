@@ -2,7 +2,7 @@ var App = {
     template:`
         <div>
             <div v-if="flag">
-                {{ list }}
+                {{ nested }}
             </div>
             <div v-else>
                 {{ msg1 }}

@@ -2,7 +2,7 @@ var App = {
     name:'App',
     template:`
         <div>
-            <div>{{ name }}</div>
+            <div>{{ lala }}</div>
             <button @click="change">{{ test }}</button>
             <button @click="changeLast">change last name</button>
         </div>
@@ -21,7 +21,7 @@ var App = {
         }
     },
     computed:{
-        name(){
+        lala(){
             if(this.useLess > 0){
                 return this.firstName + ',' + this.lastName
             }
