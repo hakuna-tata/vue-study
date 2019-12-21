@@ -2,7 +2,7 @@ var App = {
     name:'App',
     template:`
         <div>
-            <div>{{ lala }}</div>
+            <div>{{ name }}</div>
             <button @click="change">{{ test }}</button>
             <button @click="changeLast">change last name</button>
         </div>
@@ -21,35 +21,35 @@ var App = {
         }
     },
     computed:{
-        lala(){
+        name(){
             if(this.useLess > 0){
                 return this.firstName + ',' + this.lastName
             }
             return 'plz click change'
         }
     },
-    // watch:{
-    //     useLess(newVal){
-    //         console.loh('useless:'newVal)
-    //     },
-    //     name:{
-    //         immediate:true,
-    //         handler(newVal){
-    //             console.log('name:'newVal)
-    //         }
-    //     },
-    //     nested:{
-    //         deep:true,
-    //         // sync:true,
-    //         handler(newVal){
-    //             console.log('nested:'newVal.a.b)
-    //         }
-    //     }
-    // },
+    watch:{
+        useLess(newVal){
+            console.log('useless:',newVal)
+        },
+        name:{
+            immediate:true,
+            handler(newVal){
+                console.log('name:',newVal)
+            }
+        },
+        nested:{
+            deep:true,
+            // sync:true,
+            handler(newVal){
+                console.log('nested:',newVal.a.b)
+            }
+        }
+    },
     methods:{
         change(){
             this.useLess ++
-            // thid.nested.a.b = 2
+            this.nested.a.b = 2
         },
         changeLast(){
             this.lastName = "Da Xue"

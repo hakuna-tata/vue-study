@@ -4632,9 +4632,9 @@
     } else {
       observe(vm._data = {}, true /* asRootData */);
     }
-    debugger
     if (opts.computed) { initComputed(vm, opts.computed); }
     if (opts.watch && opts.watch !== nativeWatch) {
+      debugger
       initWatch(vm, opts.watch);
     }
   }
@@ -4965,7 +4965,6 @@
       // a flag to avoid this being observed
       vm._isVue = true;
       // merge options
-      debugger
       if (options && options._isComponent) {
         // optimize internal component instantiation
         // since dynamic options merging is pretty slow, and none of the
@@ -5193,7 +5192,6 @@
   }
 
   function initComputed$1 (Comp) {
-    debugger
     var computed = Comp.options.computed;
     for (var key in computed) {
       defineComputed(Comp.prototype, key, computed[key]);
