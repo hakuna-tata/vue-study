@@ -1,6 +1,15 @@
 new Vue({
     el:"#app",
-    data:{
-        msg:"hi!"
+    render(createElement){
+        return createElement('div',{
+            attrs:{
+                id:'app'
+            }
+        }, this.msg)
+    },
+    data(){
+        return{
+            msg:"hi!"
+        }
     }
 })
