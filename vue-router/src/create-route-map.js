@@ -7,7 +7,7 @@ import { assert, warn } from './util/warn'
 export function createRouteMap (
   routes: Array<RouteConfig>,
   oldPathList?: Array<string>,
-  oldPathMap?: Dictionary<RouteRecord>,
+  oldPathMap?: Dictionary<RouteRecord>, 
   oldNameMap?: Dictionary<RouteRecord>
 ): {
   pathList: Array<string>,
