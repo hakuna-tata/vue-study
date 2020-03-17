@@ -1203,7 +1203,6 @@
 
     Vue.mixin({
       beforeCreate: function beforeCreate () {
-        debugger;
         if (isDef(this.$options.router)) {
           this._routerRoot = this;
           this._router = this.$options.router;
@@ -1458,6 +1457,7 @@
       currentRoute,
       redirectedFrom
     ) {
+      debugger;
       var location = normalizeLocation(raw, currentRoute, false, router);
       var name = location.name;
 
@@ -2680,6 +2680,7 @@
         this.history = new HTML5History(this, options.base);
         break
       case 'hash':
+        debugger;
         this.history = new HashHistory(this, options.base, this.fallback);
         break
       case 'abstract':
@@ -2699,7 +2700,6 @@
     current,
     redirectedFrom
   ) {
-    debugger;
     return this.matcher.match(raw, current, redirectedFrom)
   };
 
@@ -2744,6 +2744,7 @@
       var setupHashListener = function () {
         history.setupListeners();
       };
+      console.log(history.getCurrentLocation())
       history.transitionTo(
         history.getCurrentLocation(),
         setupHashListener,

@@ -323,6 +323,7 @@
     this._actionSubscribers = [];
     this._mutations = Object.create(null);
     this._wrappedGetters = Object.create(null);
+    debugger;
     this._modules = new ModuleCollection(options);
     this._modulesNamespaceMap = Object.create(null);
     this._subscribers = [];
