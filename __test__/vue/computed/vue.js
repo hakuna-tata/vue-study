@@ -4055,6 +4055,7 @@
       };
     } else {
       updateComponent = function () {
+        // debugger;
         vm._update(vm._render(), hydrating);
       };
     }
@@ -4816,6 +4817,7 @@
 
   function createComputedGetter (key) {
     return function computedGetter () {
+      debugger;
       var watcher = this._computedWatchers && this._computedWatchers[key];
       if (watcher) {
         if (watcher.dirty) {

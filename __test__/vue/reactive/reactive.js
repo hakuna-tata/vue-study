@@ -26,7 +26,7 @@ var App = {
         change(){
             // this.list[0] = 22
             // this.list.__ob__.dep.notify()
-            this.msg = Math.random()
+            Vue.set(this.nested, "age", 24)
         },
         toggle(){
             this.flag = !this.flag
