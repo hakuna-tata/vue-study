@@ -19,7 +19,7 @@ new Vue({
   },
   methods:{
     changeData(){
-      this.test = "change2"
+      this.lastName = "change2"
     }
   }
 })

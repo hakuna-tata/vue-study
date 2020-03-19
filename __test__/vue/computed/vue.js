@@ -4055,7 +4055,6 @@
       };
     } else {
       updateComponent = function () {
-        // debugger;
         vm._update(vm._render(), hydrating);
       };
     }
