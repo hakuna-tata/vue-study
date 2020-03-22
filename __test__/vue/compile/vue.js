@@ -11809,6 +11809,7 @@
     template,
     options
   ) {
+    debugger
     var ast = parse(template.trim(), options);
     if (options.optimize !== false) {
       optimize(ast, options);
@@ -11891,6 +11892,7 @@
       } else if (el) {
         template = getOuterHTML(el);
       }
+      debugger
       if (template) {
         /* istanbul ignore if */
         if (config.performance && mark) {
