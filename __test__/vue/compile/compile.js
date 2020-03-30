@@ -1,9 +1,11 @@
 new Vue({
   el:"#app",
-  template:`<ul :class="bindCls" class="list" v-if="isShow">
-    <li v-for="(item, index) in data" @click="clickItem(index)">{{ item }}:<{{ index }}</li>
+  template:`<div>
+    <ul :class="bindCls" class="list" v-if="isShow">
+      <li v-for="(item, index) in data" @click="clickItem(index)">{{ item }}:<{{ index }}</li>
+    </ul>
     <p>123<div>456</div></p>
-  </ul>`,
+  </div>`,
   data(){
     return{
       bindCls: 'a',
