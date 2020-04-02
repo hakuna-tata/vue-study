@@ -1527,7 +1527,6 @@
     if (typeof child === 'function') {
       child = child.options;
     }
-
     normalizeProps(child, vm);
     normalizeInject(child, vm);
     normalizeDirectives(child);
@@ -4625,6 +4624,7 @@
   function initState (vm) {
     vm._watchers = [];
     var opts = vm.$options;
+    debugger
     if (opts.props) { initProps(vm, opts.props); }
     if (opts.methods) { initMethods(vm, opts.methods); }
     if (opts.data) {
