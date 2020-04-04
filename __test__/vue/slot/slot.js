@@ -1,32 +1,37 @@
-var AppLayout = {
+var App = {
   template: `
     <div class="container">
-      <header><slot name="header"></slot></header>
-      <main><slot>ÈªòËÆ§ÂÜÖÂÆπ</slot></main>
-      <footer><slot name="footer"></slot></footer>
+      <slot name="header"></slot>
+      <slot name="footer"><h1>footer</h1></slot>
+      <slot text="hello" :msg="msg"></slot>
     </div>
-  `
+  `,
+  data(){
+    return{
+      msg: "Vue"
+    }
+  }
 }
 
 new Vue({
-  el: '#app',
+  el: "#app",
   template: `<div>
-    <app-layout>
+    <app>
       <template v-slot:header>
-        <h1>{{title}}</h1>
+        <h1>{{ title }}</h1>
       </template>
-      <p>{{msg}}</p>
-      <p slot="footer">{{desc}}</p>
-    </app-layout>
+      <template slot-scope="props">
+        <p>Hello from parent</p>
+        <p>{{ props.text + props.msg}}</p>
+      </template>
+    </app>
   </div>`,
   data() {
     return {
-      title: "标题",
-      msg: "内容",
-      desc: "页脚"
+      title: "header"
     }
   },
   components: {
-    AppLayout
+    App
   }
 })

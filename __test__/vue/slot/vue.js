@@ -9272,7 +9272,7 @@
     var re = shouldDecodeNewlines ? encodedAttrWithNewLines : encodedAttr;
     return value.replace(re, function (match) { return decodingMap[match]; })
   }
-
+  
   function parseHTML (html, options) {
     var stack = [];
     var expectHTML = options.expectHTML;
@@ -9704,7 +9704,6 @@
         );
       }
     }
-
     parseHTML(template, {
       warn: warn$2,
       expectHTML: options.expectHTML,
@@ -9792,7 +9791,6 @@
             checkRootConstraints(root);
           }
         }
-
         if (!unary) {
           currentParent = element;
           stack.push(element);
