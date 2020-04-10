@@ -4624,7 +4624,6 @@
   function initState (vm) {
     vm._watchers = [];
     var opts = vm.$options;
-    debugger
     if (opts.props) { initProps(vm, opts.props); }
     if (opts.methods) { initMethods(vm, opts.methods); }
     if (opts.data) {
@@ -9932,6 +9931,7 @@
     element,
     options
   ) {
+    debugger
     processKey(element);
 
     // determine whether this is a plain element after
@@ -11212,6 +11212,7 @@
     slots,
     state
   ) {
+    debugger
     // by default scoped slots are considered "stable", this allows child
     // components with only scoped slots to skip forced updates from parent.
     // but in some cases we have to bail-out of this optimization
