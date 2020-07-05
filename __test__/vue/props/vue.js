@@ -9272,7 +9272,11 @@
     var re = shouldDecodeNewlines ? encodedAttrWithNewLines : encodedAttr;
     return value.replace(re, function (match) { return decodingMap[match]; })
   }
+<<<<<<< HEAD
+  
+=======
 
+>>>>>>> 27516ea0cfb6ac743cffe69718f733eefa66c47f
   function parseHTML (html, options) {
     var stack = [];
     var expectHTML = options.expectHTML;
@@ -9704,7 +9708,10 @@
         );
       }
     }
+<<<<<<< HEAD
+=======
 
+>>>>>>> 27516ea0cfb6ac743cffe69718f733eefa66c47f
     parseHTML(template, {
       warn: warn$2,
       expectHTML: options.expectHTML,
@@ -9792,7 +9799,10 @@
             checkRootConstraints(root);
           }
         }
+<<<<<<< HEAD
+=======
 
+>>>>>>> 27516ea0cfb6ac743cffe69718f733eefa66c47f
         if (!unary) {
           currentParent = element;
           stack.push(element);
