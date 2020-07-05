@@ -350,10 +350,12 @@
     // init root module.
     // this also recursively registers all sub-modules
     // and collects all module getters inside this._wrappedGetters
+    debugger;
     installModule(this, state, [], this._modules.root);
 
     // initialize the store vm, which is responsible for the reactivity
     // (also registers _wrappedGetters as computed properties)
+    debugger;
     resetStoreVM(this, state);
 
     // apply plugins
@@ -570,7 +572,7 @@
       // using partial to return function with only arguments preserved in closure environment.
       computed[key] = partial(fn, store);
       Object.defineProperty(store.getters, key, {
-        get: function () { return store._vm[key]; },
+        get: function () { debugger; return store._vm[key]; },
         enumerable: true // for local getters
       });
     });

@@ -43,8 +43,9 @@ const moduleB = {
     }
   }
 }
- 
+debugger;
 const store = new Vuex.Store({
+  strict: true,
   modules:{
     a:moduleA,
     b:moduleB
